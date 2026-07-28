@@ -1,1 +1,5 @@
+#To create resource group
 az deployment create --location norwayeast --template-file rg.bicep
+
+#when deploying resources to resource group use deployment group create:
+az deployment group create --name demoRGDeployment --resource-group makesh --template-file storage.bicep
