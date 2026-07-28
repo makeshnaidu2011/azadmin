@@ -1,0 +1,1 @@
+az deployment create --location norwayeast --template-file rg.bicep
