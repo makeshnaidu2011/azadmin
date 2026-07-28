@@ -1,5 +1,11 @@
 #To create resource group
 az deployment create --location norwayeast --template-file rg.bicep
 
+-------------------------------------------------storage-----------------------------------------------------------
 #when deploying resources to resource group use deployment group create:
 az deployment group create --name demoRGDeployment --resource-group makesh --template-file storage.bicep
+
+#Using Paramfile
+az deployment group create \
+  --resource-group my-rg \
+  --parameters main.bicepparam
