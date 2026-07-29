@@ -9,3 +9,11 @@ az deployment group create --name demoRGDeployment --resource-group makesh --tem
 az deployment group create \
   --resource-group my-rg \
   --parameters main.bicepparam
+
+
+----------------------------------modular deployment --------------------------------------------------------
+validate:
+az deployment sub validate   --location norwayeast   --template-file main.bicep   --parameters main.bicepparam
+
+create:
+ az deployment sub create   --name deploy-resource-group-storage   --location norwayeast   --template-file main.bicep   --parameters main.bicepparam
